@@ -28,20 +28,20 @@
   </div>
 	 <div class="col-4">
     <label for="email-input" class="form-label">Email Address</label>
-   <div id="email-inputFeedback" class="invalid-feedback">
-		 <input type="email" class="form-control" id="email-input" placeholder="xyz@abc.com" required aria-describedby="email-inputFeedback"/>
-  Email required!
+		 <input type="email" class="form-control is-invalid" id="email-input" placeholder="xyz@abc.com" required aria-describedby="email-inputFeedback"/>
+  <div id="email-inputFeedback" class="invalid-feedback">
+		 Email required!
    </div>
 	 </div>
 	<div class="col-6">
     <label for="college-input" class="form-label">College</label>
     <input type="text" class="form-control is-invalid" id="college-input" aria-describedby="college-inputFeedback" required>
-    <div id="college-input3Feedback" class="invalid-feedback">
+    <div id="college-inputFeedback" class="invalid-feedback">
       Please provide a valid college.
     </div>
   </div>
 		<div class="col-3">
-    <label for="state-input" class="form-label">State</label>
+    <label for="state-input" class="form-label">Graduation Year</label>
     <select class="form-select is-invalid" id="state-input" aria-describedby="state-inputFeedback" required>
       <option selected disabled value="">Choose...</option>
       <option>2020</option>
@@ -53,18 +53,27 @@
       Please select a valid state.
     </div>
   </div>
-	 <div class="col-3">
-		 <label for="roll-no-input" class="form-label">Roll No.</label>
-	<input type="text" class="form-control" id="roll-no-input" required oninvalid="setCustomValidity('Please select a valid Roll no.')"/>
-</div>
-	  <div class="form-check m-2">
-      <input class="form-check-input" type="checkbox" id="conditions-checkbox" required oninvalid="setCustomValidity('You must agree before submitting')"/>
-      <label class="form-check-label" for="conditions-checkbox">
-        Agree to terms and conditions 
-      </label></div>
-		  <div class="m-3">
-			  <button class="bg-primary text-white rounded">Submit Form</button></div>
+	<div class="col-3">
+    <label for="roll-no-input" class="form-label">Roll no.</label>
+    <input type="text" class="form-control is-invalid" id="roll-no-input" aria-describedby="roll-no-inputFeedback" required>
+    <div id="roll-no-inputFeedback" class="invalid-feedback">
+      Please provide a valid Roll no.
     </div>
+  </div>
+	 <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="conditions-checkbox" aria-describedby="conditions-checkboxFeedback" required>
+      <label class="form-check-label" for="conditions-checkbox">
+        Agree to terms and conditions
+      </label>
+      <div id="conditions-checkboxFeedback" class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
  </form>
 	 </div>
 	<script type="text/javascript" src="./script.js">
